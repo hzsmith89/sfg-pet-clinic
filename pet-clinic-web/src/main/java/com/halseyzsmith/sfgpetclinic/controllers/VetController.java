@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping({"vets", "vets.html"})
 @Controller
+@RequestMapping({"/vets", "/vets.html"})
 public class VetController {
 
     final VetService vetService;
