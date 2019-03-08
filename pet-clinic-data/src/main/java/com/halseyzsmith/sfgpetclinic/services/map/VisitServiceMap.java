@@ -3,12 +3,14 @@ package com.halseyzsmith.sfgpetclinic.services.map;
 import com.halseyzsmith.sfgpetclinic.model.Visit;
 import com.halseyzsmith.sfgpetclinic.services.VisitService;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
 @AllArgsConstructor
+@Profile({"default", "map"})
 public class VisitServiceMap extends AbstractServiceMap<Visit, Long> implements VisitService {
 
     @Override

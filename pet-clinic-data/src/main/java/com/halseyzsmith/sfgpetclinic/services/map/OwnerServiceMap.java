@@ -6,12 +6,14 @@ import com.halseyzsmith.sfgpetclinic.services.OwnerService;
 import com.halseyzsmith.sfgpetclinic.services.PetService;
 import com.halseyzsmith.sfgpetclinic.services.PetTypeService;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@AllArgsConstructor
 @Service
+@AllArgsConstructor
+@Profile({"default", "map"})
 public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
