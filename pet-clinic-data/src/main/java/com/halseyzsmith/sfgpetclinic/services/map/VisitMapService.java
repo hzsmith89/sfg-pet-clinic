@@ -11,7 +11,7 @@ import java.util.Set;
 @Service
 @AllArgsConstructor
 @Profile({"default", "map"})
-public class VisitServiceMap extends AbstractServiceMap<Visit, Long> implements VisitService {
+public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override
     public Set<Visit> findAll() {
