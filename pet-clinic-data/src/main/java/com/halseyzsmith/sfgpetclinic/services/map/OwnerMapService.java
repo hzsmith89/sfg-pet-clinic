@@ -19,6 +19,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     private final PetTypeService petTypeService;
     private final PetService petService;
 
+
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -61,12 +62,17 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public void delete(Owner object) {
-        super.delete(object);
+    public void delete(Owner owner) {
+        super.delete(owner);
     }
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+
+        return this.findAll()
+                .stream()
+                .filter( owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
     }
 }
