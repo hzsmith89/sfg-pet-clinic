@@ -2,9 +2,7 @@ package com.halseyzsmith.sfgpetclinic.model;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -14,6 +12,10 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Table(name = "specialties")
 public class Specialty  extends BaseEntity{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "description")
     private String description;
