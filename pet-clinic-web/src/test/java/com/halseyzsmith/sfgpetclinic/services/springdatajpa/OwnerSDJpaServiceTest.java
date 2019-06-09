@@ -31,7 +31,7 @@ class OwnerSDJpaServiceTest {
     private final Long OWNER_ID = 1L;
     private final String LAST_NAME = "Smith";
 
-    Owner mockOwner;
+    private Owner mockOwner;
 
     @BeforeEach
     void setUp() {
